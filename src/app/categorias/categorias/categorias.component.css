@@ -1,0 +1,24 @@
+.row{
+    width: 100vw;
+    display: flex;
+
+}
+
+.container{
+    margin: 0%;
+    padding-top: 1vh;
+}
+
+.col-sm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px black solid;
+    height: 25vh;
+}
+
+.tarea{
+    height: 5vh;
+    border: 1px black solid;
+}
