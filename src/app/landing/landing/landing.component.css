@@ -1,0 +1,19 @@
+#container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+#divCentrado{
+    margin-top: 5vh;
+    display: flex;
+    height: 45vh;
+    width: 55vw;
+    border: 0.1vh solid black;
+}
+
+#presentacion{
+    padding: 1vh;
+    border-right: 0.1vh solid black;
+}
