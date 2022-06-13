@@ -4,9 +4,9 @@ que llevara a un formulario para enviar sugerencia y aparte un boton para ir a l
     <div id="divLogin">
         <h2>Iniciar sesión</h2>
         <form>
-            <input type="email" class="form-control" placeholder="Introduce tu correo">
-            <input type="password" class="form-control" placeholder="Introduce tu contraseña">
-            <button class="btn btn-primary" (click)="navigateToInicio()">Acceder</button>
+            <input type="email" class="form-control" placeholder="Introduce tu correo" [(ngModel)]="email" name="email">
+            <input type="password" class="form-control" placeholder="Introduce tu contraseña" [(ngModel)]="password" name="password">
+            <button class="btn btn-primary" (click)="realizarLogin()">Acceder</button>
         </form>
         
     </div>

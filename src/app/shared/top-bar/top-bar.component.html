@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topbar" *ngIf="isLoggedIn$ | async">
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
