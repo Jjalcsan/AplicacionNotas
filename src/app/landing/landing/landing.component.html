@@ -9,13 +9,13 @@
         </div>
         <div id="sugerencia">
             <form>
-                <input type="email">
+                <input type="email" [(ngModel)]="email" name="email">
                 <label>Tu correo</label>
-                <input type="text">
+                <input type="text" [(ngModel)]="name" name="name">
                 <label>Tu nombre</label>
-                <input type="text">
+                <input type="text" [(ngModel)]="content" name="content">
                 <label>¿Qué nos quieres decir?</label>
-                <button class="btn btn-primary">Enviar</button>
+                <a [href]="emailstring"><button class="btn btn-primary" >Enviar</button></a>
             </form>
         </div>
     </div>

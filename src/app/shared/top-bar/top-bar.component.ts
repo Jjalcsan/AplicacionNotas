@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
@@ -11,7 +12,7 @@ export class TopBarComponent implements OnInit {
 
   isLoggedIn$!: Observable<boolean>; 
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, public router : Router) { }
 
   ngOnInit(): void {
     this.isLoggedIn$ = this.authService.isLoggedIn;
@@ -19,6 +20,10 @@ export class TopBarComponent implements OnInit {
 
   onLogout(){
     this.authService.logout();
+    this.router.navigateByUrl("")
+
   }
+
+  
 
 }

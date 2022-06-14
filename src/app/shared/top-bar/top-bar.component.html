@@ -1,21 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="topbar" *ngIf="isLoggedIn$ | async">
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">New Category</a>
         </li>
+
         <li class="nav-item">
             <a class="nav-link" href="#">User Admin</a>
             <!--Operacion Crud de los usuarios-->
         </li>
+
+        <li class="nav-item">
+          <img src="assets/img/defaultUser.png">
+        </li>
+
+        <li class="nav-item"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></li>
+        
+        <li><a (click)="onLogout()"><p>Cerrar sesión</p></a></li>
       </ul>
     </div>
     <div id="searchyProfile">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <img src="assets/img/defaultUser.png">
+        
+        
+        
     </div>
   </nav>
