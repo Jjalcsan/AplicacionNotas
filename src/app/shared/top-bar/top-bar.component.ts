@@ -21,7 +21,6 @@ export class TopBarComponent implements OnInit {
   onLogout(){
     this.authService.logout();
     this.router.navigateByUrl("")
-
   }
 
   

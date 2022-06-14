@@ -7,6 +7,7 @@ import { CategoriasModule } from './categorias/categorias.module';
 import { SharedModule } from './shared/shared.module';
 import { CategoriaModule } from './categoria/categoria.module';
 import { LandingModule } from './landing/landing.module';
+import { CrudAdminModule } from './crud-admin/crud-admin.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LandingModule } from './landing/landing.module';
     SharedModule,
     CategoriaModule,
     LandingModule,
-    HttpClientModule
+    HttpClientModule,
+    CrudAdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

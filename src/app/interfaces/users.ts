@@ -7,30 +7,25 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface Categories {
-    id:         number;
-    categories: Category[];
+export interface Users {
+    users: User[];
 }
 
-export interface Category {
-    id:    number;
-    name:  string;
-    tasks: Task[];
-}
-
-export interface Task {
-    id:      number;
-    content: string;
+export interface User {
+    id:       number;
+    email:    string;
+    password: string;
+    role:     string;
 }
 
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toCategories(json: string): Categories {
+    public static toCategories(json: string): Users {
         return cast(JSON.parse(json), r("Categories"));
     }
 
-    public static categoriesToJson(value: Categories): string {
+    public static categoriesToJson(value: Users): string {
         return JSON.stringify(uncast(value, r("Categories")), null, 2);
     }
 }
@@ -169,16 +164,12 @@ function r(name: string) {
 
 const typeMap: any = {
     "Categories": o([
-        { json: "id", js: "id", typ: 0 },
-        { json: "categories", js: "categories", typ: a(r("Category")) },
+        { json: "users", js: "users", typ: a(r("User")) },
     ], false),
-    "Category": o([
+    "User": o([
         { json: "id", js: "id", typ: 0 },
-        { json: "name", js: "name", typ: "" },
-        { json: "tasks", js: "tasks", typ: a(r("Task")) },
-    ], false),
-    "Task": o([
-        { json: "id", js: "id", typ: 0 },
-        { json: "content", js: "content", typ: "" },
+        { json: "email", js: "email", typ: "" },
+        { json: "password", js: "password", typ: "" },
+        { json: "role", js: "role", typ: "" },
     ], false),
 };

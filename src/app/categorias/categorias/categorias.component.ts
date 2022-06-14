@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Categories, Categorie } from 'src/app/interfaces/tareas';
+import { Categories, Category } from 'src/app/interfaces/tareas';
 import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 })
 export class CategoriasComponent implements OnInit {
 
-  categorias: [] = []
+  categorias: Categories[] = [];
 
   constructor(private router : Router, private http : HttpClient, private tasks : TasksService) { }
 
@@ -25,7 +25,7 @@ export class CategoriasComponent implements OnInit {
 
   cargarCategorias() {
     this.tasks.cargarCategorias()
-    .subscribe(resp => {//Cargar categorias
+    .subscribe(resp => {//this.categorias = resp;
        console.log(resp);}
     ,error => {console.log(error);})
   }
